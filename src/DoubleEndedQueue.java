@@ -14,62 +14,62 @@ public class DoubleEndedQueue<T> {
         content.clear();
     }
 
-    // O(1)
+    // Komplexität: O(1)
     public boolean empty() {
         return content.isEmpty();
     }
 
-    // O(1)
+    // Komplexität: O(1)
     public int size() {
         return content.size();
     }
 
-    // O(1)
+    // Komplexität: O(1)
     public void pushFront(T value) {
         content.addFirst(value);
     }
 
-    // O(1)
+    // Komplexität: O(1)
     public void pushBack(T value) {
         content.addLast(value);
     }
 
-    // O(1)
+    // Komplexität: O(1)
     public T popFront() {
         return content.removeFirst();
     }
 
-    // O(1)
+    // Komplexität: O(1)
     public T popBack() {
         return content.removeLast();
     }
 
-    // O(1)
+    // Komplexität: O(1)
     public void removeFirst(T value) {
         content.removeFirstOccurrence(value);
     }
 
-    // O(1)
+    // Komplexität: O(1)
     public void removeLast(T value) {
         content.removeLastOccurrence(value);
     }
 
-    // O(1)
+    // Komplexität: O(1)
     public T getFront() {
         return content.getFirst();
     }
 
-    // O(1)
+    // Komplexität: O(1)
     public T getBack() {
         return content.getLast();
     }
 
-    // O(n)
+    // Komplexität: O(n)
     public boolean find(T value) {
         return content.contains(value);
     }
 
-    // O(n)
+    // Komplexität: O(n)
     public void print() {
         System.out.println(this);
     }
