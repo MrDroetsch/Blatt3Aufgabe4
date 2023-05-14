@@ -38,6 +38,10 @@ public class Testing {
 
         // Queue ausgeben
         myQueue.print();
+
+        /* Aufgabe 4c:
+        Die Komplexität von allen Methoden ist O(1), mit ausnahme von dispose, find und print. Dort ist eine Komplexität von O(n)
+         */
     }
 
 }
