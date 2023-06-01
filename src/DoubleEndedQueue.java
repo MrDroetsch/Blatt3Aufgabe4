@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 
 public class DoubleEndedQueue<T> {
-
+    // Ich bin mir nicht sicher, ob ihr das selber implementieren solltet, aber lasse ich mal so durchgehen ;)
     // LinkedList ist in der Java-Implementierung eine Doppelt verkettete Liste
     private final LinkedList<T> content;
 
@@ -46,7 +46,7 @@ public class DoubleEndedQueue<T> {
 
     // Komplexität: O(1)
     // intern wird beim Aufruf von removeFirstOccurence wahrscheinlich die Liste durchlaufen und bei jedem Element der
-    // Liste verglichen, ob es gleich dem value ist. Die Komplexität wäre also O(n). Wir haben aber auch wieder mal
+    // Liste verglichen, ob es gleich dem value ist. Die Komplexität wäre also O(2n). Wir haben aber auch wieder mal
     // keine Lösung zu der Aufgabe bekommen. Kann also sein, dass ich falsch liege.
     public void removeFirst(T value) {
         content.removeFirstOccurrence(value);

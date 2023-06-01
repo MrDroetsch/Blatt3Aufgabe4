@@ -53,7 +53,7 @@ public class Testing {
 
         /* Aufgabe 4c:
         Die Komplexität von allen Methoden ist O(1), mit Ausnahme von removeFirst, removeLast, dispose, find und print.
-        Dort ist eine Komplexität von O(n).
+        Dort ist eine Komplexität von O(n), bzw. O(2n) bei removeFirst und removeLast.
          */
     }
 }
