@@ -45,11 +45,15 @@ public class DoubleEndedQueue<T> {
     }
 
     // Komplexität: O(1)
+    // intern wird beim Aufruf von removeFirstOccurence wahrscheinlich die Liste durchlaufen und bei jedem Element der
+    // Liste verglichen, ob es gleich dem value ist. Die Komplexität wäre also O(n). Wir haben aber auch wieder mal
+    // keine Lösung zu der Aufgabe bekommen. Kann also sein, dass ich falsch liege.
     public void removeFirst(T value) {
         content.removeFirstOccurrence(value);
     }
 
     // Komplexität: O(1)
+    // s. oben
     public void removeLast(T value) {
         content.removeLastOccurrence(value);
     }
@@ -72,6 +76,14 @@ public class DoubleEndedQueue<T> {
     // Komplexität: O(n)
     public void print() {
         System.out.println(this);
+    }
+
+    public T getElement(int index) {
+        return content.get(index);
+    }
+
+    public void removeElement(int index) {
+        content.remove(index);
     }
 
     @Override

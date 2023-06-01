@@ -22,6 +22,18 @@ public class Testing {
         myQueue.pushBack(15);
 
         // alle 15 löschen
+        // Deine Lösung ist zwar richtig, allerdings wäre es performanter, die Queue nur einmal mit einer Schleife
+        // zu durchlaufen und dann zu prüfen, ob das entsprechende Element eine 15 ist und es dann direkt zu entfernen.
+        // Die Schleife dann am besten Rückwärts durchlaufen, da dies beim Entfernen von Elementen bei einer Collection
+        // so geläufig ist, um Indexfehlern vorzubeugen. Ist aber nur ein Hinweis, deins ist trotzdem richtig :)
+        // Hier hab ich das mal aufgeschrieben zur Veranschaulichung:
+
+        for (int i = myQueue.size()-1; i >= 0; i--) {
+            if (myQueue.getElement(i) == 15) {
+                myQueue.removeElement(i);
+            }
+        }
+
         while(myQueue.find(15)) {
             myQueue.removeFirst(15);
         }
@@ -40,8 +52,8 @@ public class Testing {
         myQueue.print();
 
         /* Aufgabe 4c:
-        Die Komplexität von allen Methoden ist O(1), mit ausnahme von dispose, find und print. Dort ist eine Komplexität von O(n)
+        Die Komplexität von allen Methoden ist O(1), mit Ausnahme von removeFirst, removeLast, dispose, find und print.
+        Dort ist eine Komplexität von O(n).
          */
     }
-
 }
